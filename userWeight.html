@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitDays - 목표 체중 설정</title>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/layout.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.easy-pie-chart/1.0.1/jquery.easy-pie-chart.js"></script>
+    <link rel="stylesheet" href="./assets/css/demo.css" />
+    <link rel="stylesheet" href="./assets/css/rsSliderLens.css">
+    <script src="./assets/js/jquery.rsSliderLens.js"></script>
+    <script src="./assets/js/common.js"></script>
+</head>
+<body style="height: 100vh; margin-bottom:0;">
+
+    <!-- subPage Header -->
+    <div class="subHeader type2">
+        <div class="backBtn" onclick="history.back();">
+            <i class="fas fa-angle-left"></i>
+        </div>
+        <div class="pageTitle">
+            목표 체중 설정
+        </div>
+    </div>
+    <!-- subPage Header -->
+
+
+    <!-- userWeight tartget -->
+    <div class="userWeight">
+
+        <h5>마지막 체중 : 75.5kg</h5>
+
+        <ul>
+            <li>
+                <span>
+                    저체중
+                </span>
+            </li>
+            <li>
+                <span>
+                    정상
+                    <b>표시</b>
+                </span>
+            </li>
+            <li>
+                <span>
+                    과체중
+                </span>
+            </li>
+            <li>
+                <span>
+                    초과
+                </span>
+            </li>
+        </ul>
+
+        <ul>
+            <li>저체중</li>
+            <li>정상</li>
+            <li>과체중</li>
+            <li>초과</li>
+        </ul>
+
+
+        <div class="inputRangeBox">
+            <!-- 
+                커스터마이징
+                체중계 드래그.js
+                input[type:range] value값을 가져가야한다.
+             -->
+            <div><label></label><span>Kg</span></div>
+            <div class="rangeSliderBox">
+                <input type="range">
+                <div class="rangeFocus"></div>
+                <div class="leftOpacityBox"></div>
+                <div class="rightOpacityBox"></div>
+            </div>
+        </div>
+
+        
+    </div>
+    <!-- userWeight tartget -->
+
+  
+    <!-- userWeight ok Btn -->
+    <div class="userWeightBtn">
+        <button type="button">확인</button>
+    </div>
+    <!-- ok Btn -->
+        
+   
+    <script>
+        var $inputs = $("input[type=range], span.slider"),
+            change = function (event, value, isFirstHandle) {
+                $(event.currentTarget).parent("div").parent().prev().find("label").text(value.toFixed(1));
+            };
+        /*
+        반드시 값을 넘길때 input값을 소수점 첫째 자리만 나타내서
+        값을 넘겨야 합니다.
+        */
+
+        var labels = [];
+        for (var i = 0; i <= 250; i+= 20) {
+            labels.push(i);
+        }
+        $inputs.eq(0).rsSliderLens({
+            step: .1,
+            paddingStart: 0.1,
+            paddingEnd: 0.1,
+            width: 300,
+            height:90,
+            max: 250,
+            fixedHandle: true,
+            ruler: { labels: { values: labels }, size: 5 }, onChange: change });
+    </script>
+</body>
+</html>
+
+
+

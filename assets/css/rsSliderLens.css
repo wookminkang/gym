@@ -1,0 +1,79 @@
+.sliderlens {
+  opacity: 0.8;
+  cursor: pointer;
+}
+.sliderlens.focus {
+  opacity: 1;
+}
+.sliderlens .range {
+  background-color: #fff;
+}
+.sliderlens .range > div {
+  background-color: #313131;
+}
+.sliderlens .range.drag > div {
+  cursor: ew-resize;
+}
+.sliderlens .range.drag.dragging > div {
+  cursor: none;
+  background: red;
+}
+
+.sliderlens > .handle,
+.sliderlens > .handle1,
+.sliderlens > .handle2 {
+  border-radius: 3em/.75em;
+  cursor: ew-resize;
+  border-width: 0.0625em 0;
+}
+
+.sliderlens > .handle:before,
+.sliderlens > .handle1:before,
+.sliderlens > .handle2:before,
+.sliderlens > .handle:after,
+.sliderlens > .handle1:after,
+.sliderlens > .handle2:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+
+
+
+.sliderlens svg > path {
+  stroke: rgba(186, 186, 186, 1);
+}
+.sliderlens svg > g > text {
+  fill: rgba(186, 186, 186, 1);
+}
+
+
+
+
+.sliderlens.fixed {
+  cursor: ew-resize;
+}
+
+.sliderlens.fixed.vert {
+  cursor: ns-resize;
+}
+
+.sliderlens.fixed > .handle {
+  border-radius: 0;
+  border: none;
+}
+.sliderlens.vert .range.drag > div {
+  cursor: ns-resize;
+}
+.sliderlens.dragging {
+  cursor: none;
+}
+.sliderlens.dragging > .handle,
+.sliderlens.dragging > .handle1,
+.sliderlens.dragging > .handle2 {
+  cursor: none;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitDays - 세팅</title>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/layout.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.easy-pie-chart/1.0.1/jquery.easy-pie-chart.js"></script>
+    <script src="./assets/js/common.js"></script>
+</head>
+<body style="height: 100vh;">
+
+    <!-- subPage Header -->
+    <div class="subHeader type2">
+        <div class="backBtn" onclick="history.back();">
+            <i class="fas fa-angle-left"></i>
+        </div>
+        <div class="pageTitle">
+            세팅
+        </div>
+    </div>
+    <!-- subPage Header -->
+
+    <!-- user Setting -->
+    <ul class="userSettingUl">
+        <li>
+            <a href="./userTheme.html">
+                <p>테마 색상 변경 </p>
+                <span>
+                    <i class="fas fa-angle-right"></i>
+                </span>
+            </a>   
+        </li>
+        <li>
+            <a href="./qna.html">
+                <p>자주 묻는 질문 </p>
+                <span>
+                    <i class="fas fa-angle-right"></i>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="./userWeight.html">
+                <p>목표 체중 설정 </p>
+                <span>
+                    <i class="fas fa-angle-right"></i>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <p>소리 측정 </p>
+                <span>
+                    <div class="customInputBox">
+                        <input type="checkbox" id="switch">
+                        <label for="switch">소리 측정</label>
+                    </div>
+                </span>
+            </a>    
+        </li>
+
+        <li>
+            <a href="./userDevice.html">
+                <p>나의 장치 </p>
+                <span>
+                    <i class="fas fa-angle-right"></i>
+                </span>
+            </a>
+        </li>
+
+        <li>
+            <a href="">
+                <p>화면잠금설정 </p>
+                <span>
+                    <i class="fas fa-angle-right"></i>
+                </span>
+            </a>
+        </li>
+    </ul>
+    <!-- user Setting -->
+
+
+
+    
+
+<script>
+    userWeight();
+</script>
+</body>
+</html>
+

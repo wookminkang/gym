@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitDays - 사용자 추가</title>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/layout.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.easy-pie-chart/1.0.1/jquery.easy-pie-chart.js"></script>
+    <script src="./assets/js/common.js"></script>
+</head>
+<body style="height: 100vh;">
+
+
+
+    
+
+    <div class="subHeaderTpye2">
+        <div class="backBtn" onclick="history.back();">
+            <i class="fas fa-angle-left"></i>
+        </div>
+    </div>
+
+    <!-- userinfoModifyBox -->
+    <div class="userinfoModifyBox">
+        <form name="userinfoForm" action="?" method="post" enctype="multipart/form-data">
+
+            <!-- user photo -->
+            <div class="userPhoto">
+                <label for="userfile"></label>
+                <input type="file" name="userfile" id="userfile" class="img_upload " img_target="#thumb1" placeholder="사진 변경하기" autocomplete="off">
+				<img id="thumb1" src="./assets/image/userImg/users.png">
+            </div>
+            <!-- user photo -->
+
+
+            <!-- user sex -->
+            <div class='userSex'>
+                <div>
+                    <input id="male" type="radio" name="gender" value="male" checked>
+                    <label for="male"><i class="fas fa-male"></i></label>
+                    <h5>남</h5>
+                </div>
+                
+                <div>
+                    <input id="female" type="radio" name="gender" value="female">
+                    <label for="female"><i class="fas fa-female"></i></label>
+                    <h5>여</h5>
+                </div>
+            </div>
+            <!-- user sex -->
+
+            <!-- userRegistBox -->
+            <div class="userRegistBox">
+
+                <!-- nickName -->
+                <div>
+                    <label for="nickName">닉네임</label>
+                    <input type="text" name="nickName" id="nickName" value="슬램덩크">
+                </div>
+                <!-- nickName -->
+
+                <!-- birthday -->
+                <div>
+                    <label for="birthday">생일</label>
+                    <input type="text" name="birthday" id="birthday" value="1993/08/13">
+                </div>
+                <!-- birthday -->
+
+
+                <!-- tall -->
+                <div>
+                    <label for="tall">키</label>
+                    <input type="text" name="tall" id="tall" value="175cm">
+                </div>
+                <!-- tall -->
+
+                <!-- weight -->
+                <div>
+                    <label for="weight">몸무게</label>
+                    <input type="text" name="weight" id="weight" value="75.4Kg">
+                </div>
+                <!-- weight -->
+
+
+                <!-- weight -->
+                <div class='customInputBox'>
+                    운동선수 모드
+                    <input type="checkbox" id="switch" />
+                    <label for="switch">운동선수 모드</label>
+                </div>
+                <!-- weight -->
+
+
+                <p>
+                    개인 정보는 헬스 데이터 평가를 위해서만 활용되며
+                </p>
+                <p>
+                    FitDays는 기밀 유지를 보장합니다.
+                </p>
+
+
+                <button type="button">확인</button>
+
+            </div>
+            <!-- userRegistBox -->
+
+
+
+        </form>
+    </div>
+    <!-- userinfoModifyBox -->
+ 
+</body>
+</html>
